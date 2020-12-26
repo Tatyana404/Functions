@@ -105,3 +105,19 @@ function f(choice) {
         calcAreaTriangle(userInput1, userInput2, userInput3)
     );
   }
+  if (choice === 4) {
+    const userInput1 = +prompt("Введите первую сторону прямоугольника:");
+    const userInput2 = +prompt("Введите вторую сторону прямоугольника:");
+    const calcAreaRectangle = function (side1, side2) {
+      if (isNaN(side1 - side2)) {
+        return "Вы ввели не число";
+      } else {
+        return side1 * side2;
+      }
+    };
+    alert(
+      "Площадь прямоугольника =" + calcAreaRectangle(userInput1, userInput2)
+    );
+  }
+}
+f(formula);
