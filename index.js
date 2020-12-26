@@ -73,3 +73,18 @@ function f(choice) {
     };
     alert("Площадь вашего ромба =" + calcAreaRhombus(userInput1, userInput2));
   }
+  if (choice === 2) {
+    const userInput1 = +prompt("Введите радиус цилиндра:");
+    const userInput2 = +prompt("Введите высоту цилиндра:");
+    const calcAreaLateralSurfaceCylinder = function (radius, height) {
+      if (isNaN(radius - height)) {
+        return "Вы ввели не число";
+      } else {
+        return 2 * Math.PI * radius * height;
+      }
+    };
+    alert(
+      "Площадь боковой поверхности цилиндра =" +
+        calcAreaLateralSurfaceCylinder(userInput1, userInput2)
+    );
+  }
