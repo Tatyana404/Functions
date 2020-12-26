@@ -61,3 +61,15 @@ function f(choice) {
   if (choice < 1 || choice > 4) {
     return alert("Такой фигуры нет!");
   }
+  if (choice === 1) {
+    const userInput1 = +prompt("Введите сторону ромба:");
+    const userInput2 = +prompt("Введите высоту ромба:");
+    const calcAreaRhombus = function (side, height) {
+      if (isNaN(side - height)) {
+        return "Вы ввели не число";
+      } else {
+        return side * height;
+      }
+    };
+    alert("Площадь вашего ромба =" + calcAreaRhombus(userInput1, userInput2));
+  }
