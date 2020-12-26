@@ -48,3 +48,16 @@ const opportunityTriangleFormation = function (side1, side2, side3) {
   return false;
 };
 alert(opportunityTriangleFormation(userInput1, userInput2, userInput3));
+
+// Task 4
+
+let formula = +prompt(
+  "Выберите фигуру:\n1 - Ромб\n2 - Цилиндр\n3 - Треугольник\n4 - Прямоугольник"
+);
+function f(choice) {
+  if (isNaN(choice)) {
+    return alert("Вы ввели не число!");
+  }
+  if (choice < 1 || choice > 4) {
+    return alert("Такой фигуры нет!");
+  }
