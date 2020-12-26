@@ -88,3 +88,20 @@ function f(choice) {
         calcAreaLateralSurfaceCylinder(userInput1, userInput2)
     );
   }
+  if (choice === 3) {
+    const userInput1 = +prompt("Введите первую сторону треугольника:");
+    const userInput2 = +prompt("Введите вторую сторону треугольника:");
+    const userInput3 = +prompt("Введите третью сторону треугольника:");
+    const calcAreaTriangle = function (side1, side2, side3) {
+      if (isNaN(side1 - side2 - side3)) {
+        return "Вы ввели не число";
+      }
+      let p = (side1 + side2 + side3) / 2;
+      let s = Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
+      return s;
+    };
+    alert(
+      "Площадь треугольника =" +
+        calcAreaTriangle(userInput1, userInput2, userInput3)
+    );
+  }
